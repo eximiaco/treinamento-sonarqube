@@ -1,0 +1,33 @@
+variables:
+  SONAR_HOST: https://sonarqube-dev.tramontina.cloud
+  SONAR_PROJECT_KEY: # <===== insirá a chave do projeto do sonarqube aqui
+
+stages:
+  - test
+  - quality
+
+test-job:
+  stage: test
+  image: node:20
+  cache:
+    key: coverage-cache-$CI_COMMIT_SHORT_SHA
+    paths:
+      - coverage/
+  script:
+    - yarn
+    - yarn test
+  tags:
+    - treinamento    
+
+sonarqube-job:
+  stage: quality
+  image: sonarsource/sonar-scanner-cli:5.0
+  cache:
+    key: coverage-cache-$CI_COMMIT_SHORT_SHA
+    paths:
+      - coverage/
+  script:
+    # <======================== Inclua aqui a execução do sonar scanner
+    - echo "Executar o sonar scanner"
+  tags:
+    - treinamento

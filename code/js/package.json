@@ -1,0 +1,24 @@
+{
+  "name": "exercise-1",
+  "version": "1.0.0",
+  "description": "Sonarqube Course - Javascript Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --ci --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dopic/treinamento-sonarqube.git"
+  },
+  "author": "Douglas Picolotto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dopic/treinamento-sonarqube/issues"
+  },
+  "homepage": "https://github.com/dopic/treinamento-sonarqube#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-to-sonar": "^1.3.0"
+  }
+}
