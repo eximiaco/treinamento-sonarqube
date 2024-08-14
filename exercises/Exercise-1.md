@@ -12,7 +12,7 @@ Fica a seu critério a escolha da linguagem/Framework: C# e .NET 8, ou Javascrip
 
 Abaixo seguem os passos para a execução da tarefa. Importante fazê-los mesmo que você já conheça a ferramenta:
 
-1. Fazer o download (sem o .git) de um dos dois projetos (C# ou Js) deste exercício (através do link fornecido)
+1. Fazer o download (sem o .git) de um dos dois projetos (C# ou Js) existentes na pasta **code** deste exercício. (Copiar somente o conteúdo).
 2. Criar um projeto no Gitlab, no namespace do seu usuário
 3. Clonar este novo projeto do Gitlab em seu computador
 3. Enviar o código do projeto selecionado (download no passo 1) para o gitlab (não faça alterações neste momento)
