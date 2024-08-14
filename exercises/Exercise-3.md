@@ -11,6 +11,6 @@ Neste exercício, integraremos o Sonarlint no VSCode para nos auxiliar na escrit
 ## Passos para a execução da tarefa
 
 1. Abrir as extensões do VSCode e pesquisar o "Sonarlint" oficial
-2. Após instalar, navegar pelas Rules existentes, ativando e desativando e experimentando no projeto de exemplo.
+2. Após instalar, navegar pelas Rules existentes, ativando, desativando e experimentando no projeto de exemplo.
 3. Acessar novamente o plugin, e iniciar a criação de um token do Sonar
 4. Após finalizada a configuração explorar novamente o código identificando as diferenças.
