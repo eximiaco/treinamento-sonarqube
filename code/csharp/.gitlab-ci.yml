@@ -1,23 +1,23 @@
-variables:
-  SONAR_HOST: https://sonarqube-dev.tramontina.cloud
-  SONAR_PROJECT_KEY: # TODO: insirá a chave do projeto do sonarqube aqui
+# variables:
+#   SONAR_HOST: https://sonarqube-dev.tramontina.cloud
+#   SONAR_PROJECT_KEY: # TODO: insirá a chave do projeto do sonarqube aqui
 
-ci-job:
-  image: mcr.microsoft.com/dotnet/sdk:8.0
-  variables:
-    DOCKER_HOST: tcp://docker-dind:2375
-  before_script:
-    - apt update
-    - apt-get install -y openjdk-17-jre
-    - dotnet tool install --global dotnet-coverage
-    - dotnet tool install --global dotnet-sonarscanner
-    - export PATH="$PATH:$HOME/.dotnet/tools"
-  script:
-    # TODO: Adicione o restante dos parâmetros
-    - dotnet-sonarscanner begin /k:"$SONAR_PROJECT_KEY" /d:sonar.token="$SONAR_TOKEN" /d:sonar.host.url="$SONAR_HOST"
-    - dotnet build
-    - dotnet test --no-restore
-    - dotnet-coverage collect "dotnet test --no-restore" -f xml -o "coverage.xml"
-    - dotnet-sonarscanner end /d:sonar.token="$SONAR_TOKEN"
-  tags:
-    - treinamento
+# ci-job:
+#   image: mcr.microsoft.com/dotnet/sdk:8.0
+#   variables:
+#     DOCKER_HOST: tcp://docker-dind:2375
+#   before_script:
+#     - apt update
+#     - apt-get install -y openjdk-17-jre
+#     - dotnet tool install --global dotnet-coverage
+#     - dotnet tool install --global dotnet-sonarscanner
+#     - export PATH="$PATH:$HOME/.dotnet/tools"
+#   script:
+#     # TODO: Adicione o restante dos parâmetros
+#     # - dotnet-sonarscanner begin /k:"$SONAR_PROJECT_KEY" /d:sonar.token="$SONAR_TOKEN" /d:sonar.host.url="$SONAR_HOST"
+#     - dotnet build
+#     - dotnet test --no-restore
+#     - dotnet-coverage collect "dotnet test --no-restore" -f xml -o "coverage.xml"
+#     # - dotnet-sonarscanner end /d:sonar.token="$SONAR_TOKEN"
+#   tags:
+#     - treinamento
