@@ -27,3 +27,9 @@ Neste exercício, integraremos o Sonarqube em nosso pipeline de CI/CD.
         - Espere a analise terminar no servidor para concluir o pipeline.
 6. Efetue o commit das atualizações e aguarde o pipeline finalizar
 7. Aguarde o pipeline e avalie os resultados.
+
+## Referências para consulta
+
+- [SonarScanner for .NET](https://docs.sonarsource.com/sonarqube/10.5/analyzing-source-code/scanners/sonarscanner-for-dotnet/)
+- [SonarScanner - Js](https://docs.sonarsource.com/sonarqube/10.5/analyzing-source-code/scanners/sonarscanner/)
+- [Analysis parameters](https://docs.sonarsource.com/sonarqube/10.5/analyzing-source-code/analysis-parameters/)
