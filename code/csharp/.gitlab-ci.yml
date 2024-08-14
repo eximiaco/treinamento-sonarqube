@@ -1,6 +1,6 @@
 variables:
   SONAR_HOST: https://sonarqube-dev.tramontina.cloud
-  SONAR_PROJECT_KEY: # <===== insirá a chave do projeto do sonarqube aqui
+  SONAR_PROJECT_KEY: # TODO: insirá a chave do projeto do sonarqube aqui
 
 ci-job:
   image: mcr.microsoft.com/dotnet/sdk:8.0
@@ -13,10 +13,11 @@ ci-job:
     - dotnet tool install --global dotnet-sonarscanner
     - export PATH="$PATH:$HOME/.dotnet/tools"
   script:
-    # <======================== Inclua aqui a inicialização do sonar scanner
+    # TODO: Adicione o restante dos parâmetros
+    - dotnet-sonarscanner begin /k:"$SONAR_PROJECT_KEY" /d:sonar.token="$SONAR_TOKEN" /d:sonar.host.url="$SONAR_HOST"
     - dotnet build
     - dotnet test --no-restore
     - dotnet-coverage collect "dotnet test --no-restore" -f xml -o "coverage.xml"
-    - # <======================== Inclua aqui a finalização do sonar scanner
+    - dotnet-sonarscanner end /d:sonar.token="$SONAR_TOKEN"
   tags:
     - treinamento
