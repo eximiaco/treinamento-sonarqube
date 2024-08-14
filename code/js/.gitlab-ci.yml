@@ -27,7 +27,7 @@ sonarqube-job:
     paths:
       - coverage/
   script:
-    # <======================== Inclua aqui a execução do sonar scanner
-    - echo "Executar o sonar scanner"
+    # TODO: Adicione o restante dos parâmetros aqui, ou no arquivo sonar-project.properties
+    - sonar-scanner -Dsonar.token="$SONAR_TOKEN" -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.host.url="$SONAR_HOST"
   tags:
     - treinamento
